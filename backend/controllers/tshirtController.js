@@ -12,7 +12,7 @@ const getAllTshirts = async (req, res) => {
 
     if (color) {
       const allColors = Array.isArray(color) ? color : color.split(",");
-      filters.colors = { $in: allColors };
+      filters.color = { $in: allColors };
     }
 
     if (price) {
